@@ -8,10 +8,6 @@ import {
 
 const useStyles = createStyles(theme => ({
   root: {
-    backgroundSize: "cover",
-    backgroundPosition: "start",
-    backgroundImage:
-      "linear-gradient(229deg, rgba(254,249,246,0.75) 35%, rgba(255,255,255,1) 100%), url(https://www.megatube.xxx/get_image/10/ecc66bb07261fddecb2107e2a0c871f9/sources/26000/26237/4913824.jpg/*)",
     paddingTop: `calc(${theme.spacing.xl} * 3)`,
     paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     color: "#11111",
@@ -36,7 +32,7 @@ const useStyles = createStyles(theme => ({
     paddingTop: `calc(${theme.spacing.xl} * 2)`,
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
     marginRight: `calc(${theme.spacing.xl} * 3)`,
-
+    fontWeight: 500,
     [theme.fn.smallerThan("md")]: {
       marginRight: 0,
     },

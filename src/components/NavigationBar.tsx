@@ -1,6 +1,6 @@
 import {
   createStyles,
-  Header,
+  Box,
   Container,
   Group,
   Burger,
@@ -14,7 +14,9 @@ const HEADER_HEIGHT = rem(60)
 
 const useStyles = createStyles(theme => ({
   root: {
-    backgroundColor: "rgba(254,249,246,0.75)",
+    // backgroundColor: "rgba(254,249,246,0.75)",
+    height: HEADER_HEIGHT,
+    backgroundColor: "transparent",
     position: "relative",
     zIndex: 1,
   },
@@ -110,7 +112,7 @@ export default function NavigationBar() {
   ))
 
   return (
-    <Header height={HEADER_HEIGHT} className={classes.root}>
+    <Box className={classes.root}>
       <Container className={classes.header}>
         <span>xxxtreme</span>
         <Group spacing={5} className={classes.links}>
@@ -136,6 +138,6 @@ export default function NavigationBar() {
           )}
         </Transition>
       </Container>
-    </Header>
+    </Box>
   )
 }
