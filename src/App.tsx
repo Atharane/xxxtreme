@@ -1,6 +1,5 @@
 import NavigationBar from './components/NavigationBar'
 import HeroSection from './components/HeroSection'
-import CardsCarousel from './components/Carousel'
 import CardsGrid from './components/CardsGrid'
 import { useMediaQuery } from '@mantine/hooks';
 import { useMantineTheme } from '@mantine/core';
@@ -25,7 +24,7 @@ function App() {
         <HeroSection />
       </section>
 
-      <CardsCarousel />
+      {/* <CardsCarousel /> */}
       <CardsGrid />
     </>
   )

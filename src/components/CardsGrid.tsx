@@ -1,18 +1,15 @@
-import { useMediaQuery } from "@mantine/hooks"
 import {
   createStyles,
   Paper,
-  Text,
   Title,
-  Button,
-  useMantineTheme,
+  Box,
   rem,
   Grid,
 } from "@mantine/core"
 
 const useStyles = createStyles(theme => ({
   card: {
-    height: rem(220),
+    height: rem(240),
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -22,19 +19,17 @@ const useStyles = createStyles(theme => ({
   },
 
   title: {
-    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontWeight: 900,
-    color: theme.white,
+    fontWeight: 400,
     lineHeight: 1.2,
-    fontSize: rem(32),
+    fontSize: rem(16),
     marginTop: theme.spacing.xs,
+    minHeight: rem(50),
   },
 
-  category: {
-    color: theme.white,
-    opacity: 0.7,
-    fontWeight: 700,
-    textTransform: "uppercase",
+  stripe: {
+    height: "1px",
+    margin: "2px 0",
+    background: "#9e9a97",
   },
 }))
 
@@ -44,36 +39,36 @@ interface CardProps {
   category: string
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, title}: CardProps) {
   const { classes } = useStyles()
 
   return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      sx={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
+    <Box mb="20">
+      <Paper
+        shadow="md"
+        p="xl"
+        radius={0}
+        sx={{
+          backgroundImage: `linear-gradient(228deg, rgba(29,29,29,0.5) 27%, rgba(105,105,105,0.6) 100%), url(${image})`,
+        }}
+        className={classes.card}
+      />
       <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
         <Title order={3} className={classes.title}>
           {title}
         </Title>
+
+        <div className={classes.stripe} />
+        <div className={classes.stripe} />
       </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
-    </Paper>
+    </Box>
   )
 }
 
 const data = [
   {
     image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
+      "alba-lala.webp",
     title: "Best forests to visit in North America",
     category: "nature",
   },
@@ -110,14 +105,13 @@ const data = [
 ]
 
 export default function CardsGrid() {
-  const theme = useMantineTheme()
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`)
-
   const slides = data.map(item => (
     <Grid.Col md={6} lg={3}>
       <Card {...item} />
     </Grid.Col>
   ))
 
-  return <Grid>{slides}</Grid>
+  return <Grid style={{
+    margin: 20
+  }}>{slides}</Grid>
 }

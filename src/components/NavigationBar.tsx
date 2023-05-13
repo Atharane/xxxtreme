@@ -14,7 +14,6 @@ const HEADER_HEIGHT = rem(60)
 
 const useStyles = createStyles(theme => ({
   root: {
-    // backgroundColor: "rgba(254,249,246,0.75)",
     height: HEADER_HEIGHT,
     backgroundColor: "transparent",
     position: "relative",
@@ -114,12 +113,17 @@ export default function NavigationBar() {
   return (
     <Box className={classes.root}>
       <Container className={classes.header}>
-        <span>xxxtreme</span>
+        <span>xxxtreme by @Atharva</span>
         <Group spacing={5} className={classes.links}>
           {items}
-          <button className={classes.link} style={{
-            border: "1px solid #111111",
-          }}>Sign up</button>
+          <button
+            className={classes.link}
+            style={{
+              border: "1px solid #111111",
+            }}
+          >
+            Sign up
+          </button>
         </Group>
 
         <Burger
