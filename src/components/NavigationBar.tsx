@@ -30,7 +30,7 @@ const useStyles = createStyles(theme => ({
     borderTopLeftRadius: 0,
     borderTopWidth: 0,
     overflow: "hidden",
-    backgroundColor: "#fef9f6",
+    backgroundColor: "rgba(255, 255, 255, 0.95 )",
 
     [theme.fn.largerThan("sm")]: {
       display: "none",
