@@ -1,15 +1,10 @@
-import {
-  createStyles,
-  Paper,
-  Title,
-  Box,
-  rem,
-  Grid,
-} from "@mantine/core"
+import { createStyles, Paper, Title, Box, rem, Grid } from "@mantine/core"
+
+import { Link } from "react-router-dom"
 
 const useStyles = createStyles(theme => ({
   card: {
-    height: rem(240),
+    height: rem(130),
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
@@ -21,9 +16,10 @@ const useStyles = createStyles(theme => ({
   title: {
     fontWeight: 400,
     lineHeight: 1.2,
-    fontSize: rem(16),
+    fontSize: rem(14),
     marginTop: theme.spacing.xs,
     minHeight: rem(50),
+    color: theme.colorScheme === "dark" ? theme.colors.dark[0] : "#555352",
   },
 
   stripe: {
@@ -39,7 +35,7 @@ interface CardProps {
   category: string
 }
 
-function Card({ image, title}: CardProps) {
+function Card({ image, title }: CardProps) {
   const { classes } = useStyles()
 
   return (
@@ -67,8 +63,7 @@ function Card({ image, title}: CardProps) {
 
 const data = [
   {
-    image:
-      "alba-lala.webp",
+    image: "alba-lala.webp",
     title: "Best forests to visit in North America",
     category: "nature",
   },
@@ -106,12 +101,20 @@ const data = [
 
 export default function CardsGrid() {
   const slides = data.map(item => (
-    <Grid.Col md={6} lg={3}>
-      <Card {...item} />
+    <Grid.Col md={6} lg={2}>
+      <Link to="/videos/1">
+        <Card {...item} />
+      </Link>
     </Grid.Col>
   ))
 
-  return <Grid style={{
-    margin: 20
-  }}>{slides}</Grid>
+  return (
+    <Grid
+      style={{
+        margin: 10,
+      }}
+    >
+      {slides}
+    </Grid>
+  )
 }

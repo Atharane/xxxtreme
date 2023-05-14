@@ -113,7 +113,7 @@ export default function NavigationBar() {
   return (
     <Box className={classes.root}>
       <Container className={classes.header}>
-        <span>xxxtreme by @Atharva</span>
+        <span>xxxtreme by @ath</span>
         <Group spacing={5} className={classes.links}>
           {items}
           <button
