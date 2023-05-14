@@ -23,7 +23,7 @@ The video files & the thumbnails are stored in a Google Cloud Storage Bucket, an
 # Contributing
 
 ## Conributing Code
-🫵 Looking for a developer well versed in Firebase to implement a user authentication system. The user authentication system should allow users to create an account, login, and upload videos. The user authentication system should also allow users to like videos, and save videos to their favorites.
+🫵 Looking for a developer well versed in Firebase to implement a user authentication system. The user authentication system should allow users to create an account, login, and upload video torrent files or links. Moreover, it should also allow users to like videos, and save videos to their favorites.
 
 ## Submitting Design Ideas
 🫵 Additionally, I am seeking a captivating logo an design system that encapsulates the essence of the site. If you possess the artistic prowess to create web designs and logos, we welcome your creative genius. 
