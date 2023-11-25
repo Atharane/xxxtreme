@@ -1,6 +1,6 @@
 # Dear recruiters, 
 Please ignore this repository. This project in no way reflects my professional abilities. I must assure you that my foray into the world of adult entertainment does not accurately reflect the entirety of my character. Rest assured, my professional pursuits and abilities extend far beyond the realm of adult content.
-Therefore, I kindly request that you disregard any lingering curiosity and avoid peeking into the repository where my beloved website resides. Instead, let's focus on the substantial accomplishments and valuable experiences that truly define me as a professional. Please hire me 🙏
+Therefore, I kindly request that you disregard any lingering curiosity and avoid peeking into the repository where my beloved website resides. Instead, let's focus on the substantial accomplishments and valuable experiences that truly define me as a professional. Also, please hire me...
 
 # Wtf is xxxtreme?
 
